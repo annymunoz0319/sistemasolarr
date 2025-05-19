@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA SOLAR</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="icon" href="./img/planeta.png">
+
+</head>
+
+<head>
+    <h1>El Sistema Solar</h1>
+    <button onclick="acercaDeSistema()"> Acerca de Sistema Solar</button>
+    <button onclick="terminar()"> Terminar</button>
+    <hr>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+                <select id="astros" onchange="mostrarAstros()" size="15">
+
+                    <option value="./img/sol.jpg">Sol</option>
+                    <option value="./img/mercurio.jpg">Mercurio</option>
+                    <option value="./img/venus.jpg">Venus</option>
+                    <option selected value="./img/tierra.jpg">La Tierra</option>
+                    <option value="./img/marte.jpg">Marte</option>
+                    <option value="./img/asteroide.jpg">Asteroides</option>
+                    <option value="./img/jupiter.jpg">Jupiter</option>
+                    <option value="./img/saturno.jpg">Saturno</option>
+                    <option value="./img/meteorito.jpg">Meteorito</option>
+                    <option value="./img/neptuno.jpg">Neptuno</option>
+                    <option value="./img/urano.jpg">Urano</option>
+                    <option value="./img/pluton.jpg">Plutón</option>
+                    <option value="./img/nave.jpg">Nave Espacial</option>
+                    <option value="./img/luna.jpg">Luna</option>
+                    <option value="./img/ss.jpg">Sistema Solar</option>
+                </select>
+
+            <main class="gallery">
+                <img id="tierra" src="./img/tierra.jpg" alt="foto">
+            </main>
+
+    </form>
+    </div>
+
+    <script>
+        function mostrarAstros() {
+
+            let astroSeleccionado = document.getElementById("astros").value;
+            console.log(astroSeleccionado);
+            document.getElementById("tierra").src = astroSeleccionado;
+
+        }
+        function acercaDeSistema() {
+            alert("Programado por Anny");
+
+        }
+        function terminar() {
+            self.close();
+
+        }</script>
+</body>
+
+</html>
